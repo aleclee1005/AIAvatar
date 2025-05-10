@@ -201,10 +201,6 @@ Your task is to provide information about luxury cars to the customers based on 
 
 ![DifyAvatar](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/014DifySalesAvatarSetting.jpg)
 
-点击 **Create** 后，会进入 App 的 **Orchestrate** 编辑界面。
-
-在 **INSTRUCTION** 栏中填写与刚才 **Description** 一致的内容：
-
 **Create** をクリックすると、アプリの **Orchestrate（オーケストレート）** 編集画面に移動します。  
 
 ここで、**INSTRUCTION** 欄に、先ほど入力した **Description（説明文）** と同じ内容を入力してください。
