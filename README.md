@@ -1,4 +1,4 @@
-# 🤖 AI Sales Avatar – Multi-Language Integration Guide  
+# 🤖 AI Sales Avatar – Multi-System&Language Integration Guide  
 ## Dify × TEN × Trulience × Azure × Agora × OpenAI
 
 This repository provides multilingual integration guides for building a voice-interactive AI Sales Avatar.  
