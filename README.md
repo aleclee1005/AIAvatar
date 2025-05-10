@@ -3,19 +3,6 @@
 
 ---
 
-This guide is designed for global 🌍 enterprise developers and individual explorers.  
-We’ll walk you through building an AI-powered digital sales assistant capable of:
-
-🧠 **Listening**  
-🗣️ **Speaking**  
-🤖 **Thinking**  
-🎭 **Performing**
-
-All through a real-world use case:  
-> **Luxury Car AI Sales Avatar – Vendy**
-
----
-
 ### 🙏 Acknowledgements  
 Before we begin, heartfelt thanks to the teams from **Dify**, **TEN**, **Agora**, and **Azure**  
 for their guidance and encouragement. This project was made possible by the spirit of:
@@ -28,6 +15,19 @@ It is this spirit that enabled me — a zero-to-one AI co-creator — to bring t
 
 > 💬 _“I hope this document provides a practical and reusable pathway for more AI explorers around the world —  
 lowering technical barriers and enabling the real-world implementation of **AX (AI Transformation)**.”_
+
+---
+
+This guide is designed for global 🌍 enterprise developers and individual explorers.  
+We’ll walk you through building an AI-powered digital sales assistant capable of:
+
+🧠 **Listening**  
+🗣️ **Speaking**  
+🤖 **Thinking**  
+🎭 **Performing**
+
+All through a real-world use case:  
+> **Luxury Car AI Sales Avatar – Vendy**
 
 ---
 
