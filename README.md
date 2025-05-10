@@ -1,5 +1,35 @@
-# 🤖 AI Sales Avatar – Multi-System&Language Integration Guide  
-## Dify × TEN × Trulience × Azure × Agora × OpenAI
+# Exploring the AI Sales Avatar  
+**Dify × TEN × Trulience × Azure × Agora × OpenAI Integration Guide**
+
+---
+
+This guide is designed for global 🌍 enterprise developers and individual explorers.  
+We’ll walk you through building an AI-powered digital sales assistant capable of:
+
+🧠 **Listening**  
+🗣️ **Speaking**  
+🤖 **Thinking**  
+🎭 **Performing**
+
+All through a real-world use case:  
+> **Luxury Car AI Sales Avatar – Vendy**
+
+---
+
+### 🙏 Acknowledgements  
+Before we begin, heartfelt thanks to the teams from **Dify**, **TEN**, **Agora**, and **Azure**  
+for their guidance and encouragement. This project was made possible by the spirit of:
+
+- ✨ Exploration  
+- 🤝 Collaboration  
+- 🚀 Empowerment  
+
+It is this spirit that enabled me — a zero-to-one AI co-creator — to bring this idea to life.
+
+> 💬 _“I hope this document provides a practical and reusable pathway for more AI explorers around the world —  
+lowering technical barriers and enabling the real-world implementation of **AX (AI Transformation)**.”_
+
+---
 
 This repository provides multilingual integration guides for building a voice-interactive AI Sales Avatar.  
 Documents are available in:
@@ -9,24 +39,18 @@ Documents are available in:
 - 🇯🇵 [日本語ガイド](./build-aisalesavatarJP.md)
 - 🇰🇷 [한국어 가이드](./build-aisalesAvatarKR.md)
 
-> 📌 Brought to you by Alec – AX Global Strategist & Full-Stack Communicator
+---
+
+### 💡 I firmly believe:
+
+> **AI is created by humans, developed by humans, and ultimately exists to protect human dignity and freedom.**  
+Only when technology resonates with human values can it truly become a power for every individual.
 
 ---
-### ✨ Project Purpose  
-This guide is designed to help individuals and enterprise developers around the world easily build and deploy an AI-powered digital sales assistant using:
 
-- [Dify](https://github.com/langgenius/dify)
-- [TEN Agent Framework](https://github.com/ten-framework)
-- [Trulience D-Human]
-- [Azure Speech + OpenAI]
-- [Agora Real-Time Voice]
+**👤 Author**: Alec Lee ｜AX Global Strategist & Full-Stack Explorer  
+_“Empowering one to stand for a thousand — leaving no one behind across cultures and systems.”_  
 
----
-### 🙌 Let's Collaborate!
-Feel free to open Issues, submit Pull Requests, or suggest improvements in any language.  
-We welcome contributions from all over the world.
-
----
-### 📫 Contact
-For feedback, collaboration, or workshops, reach out via GitHub or LinkedIn.
+📅 **Date**: May 11, 2025  
+📧 **Email**: [alec.lee1005@gmail.com](mailto:alec.lee1005@gmail.com)
 
