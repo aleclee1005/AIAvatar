@@ -1,4 +1,3 @@
-
 # AI Sales Avatar 的探索
 
 —— Dify × TEN × Trulience × Azure × Agora × OpenAI 集成实践 ——
@@ -34,7 +33,7 @@
 ---
 
 **作者**：Alec Lee｜AX 全球战略师 & 全栈探索者  
-_赋能以一当千，跨越文化与系统，不落一人。_
+_跨越文化与系统，实现“以一当千、不落一人”的 AX 新时代。_
 
 **日期**：2025 年 5 月 11 日  
 **E-Mail**：alec.lee1005@gmail.com
@@ -498,7 +497,7 @@ cd TEN-Agent/ai_agents
 cp .env.example .env
 
 .env 是 TEN Agent 运行所需的环境变量配置文件，
-接下来你需要手动编辑它，输入密钥信息（来自 Dify、Trulience、Azure、Agora）。
+接下来你需要手动编辑它，输入密钥信息。
 
 👇 示例界面如下：
 
@@ -758,7 +757,7 @@ Azure_synthesis_voice_name=en-US-AshleyNeural
 
 📣 若您也愿意加入这场全球共创的旅程，  
 欢迎携手探索与分享，让每一位个体都有机会与 AI 一同成长，  
-共同探索 **“一以当千、不落一人”** 的 AX 新时代。
+共同探索 **“以一当千、不落一人”** 的 AX 新时代。
 
 ---
 
