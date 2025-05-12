@@ -3,7 +3,7 @@
 
 ---
 
-This guide is designed for global 🌍 enterprise developers and individual explorers.  
+This guide is designed for enterprise developers and individual explorers worldwide🌍.  
 We’ll walk you through building an AI-powered digital sales assistant capable of:
 
 🧠 **Listening**  
@@ -733,7 +733,7 @@ and select **“Update Properties”** to open the configuration panel.
 
 ![TEN AgentDify API KeyGreeting](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/050TENDifyAPI2.jpg)
 
-✅ 启动 TEN Agent 并连接 Trulience 数字人
+✅ Launch the TEN Agent and connect to the Trulience Digital Human.
 
 ---
 
@@ -878,7 +878,7 @@ using the power of technology to uphold **human dignity and creativity**.
 ### 🤝 A Call for Co-Creation
 
 If you, too, wish to join this global journey of co-creation,  
-we warmly invite you to **explore, experiment, and share** —  
+we warmly invite you to **Exploration, Collaboration, and Empowerment** —  
 so that every individual can grow alongside AI,  
 and together, we may step into the AX era of:
 
