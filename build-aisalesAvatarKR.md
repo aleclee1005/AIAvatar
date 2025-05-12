@@ -500,7 +500,6 @@ cd TEN-Agent/ai_agents
 cp .env.example .env
 
 `.env`는 TEN Agent 실행에 필요한 환경 변수 설정 파일입니다.  
-다음으로 이 파일을 수동으로 편집하여 키 정보를 입력해야 합니다 (Dify, Trulience, Azure, Agora에서 제공된 정보).
 
 👇 예시 화면은 아래와 같습니다:
 
