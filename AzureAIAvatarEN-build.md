@@ -1,5 +1,5 @@
 # Exploring the AI Sales Avatar  
-**Dify × TEN × Trulience × Azure × Agora Integration Guide**
+**Azure × Agora × Dify × TEN × Trulience Integration Guide**
 
 ---
 
@@ -17,7 +17,7 @@ All through a real-world use case:
 ---
 
 ### 🙏 Acknowledgements  
-Before we begin, heartfelt thanks to the teams from **Dify**, **TEN**, **Agora**, and **Azure**  
+Before we begin, heartfelt thanks to the teams from **Agora**, **Azure**  **Dify**, and **TEN**。
 for their guidance and encouragement. This project was made possible by the spirit of:
 
 - ✨ Exploration  
@@ -46,7 +46,7 @@ _“Empowering one to stand for a thousand — leaving no one behind across cult
 
 ---
 
-## 1. What are the six platforms that power a “Listen–Think–Speak–Perform” AI Avatar?
+## 1. What are the five platforms that power a “Listen–Think–Speak–Perform” AI Avatar?
 
 This project is centered on the **TEN platform**, integrating six key systems to create **Vendy**, a luxury car AI sales avatar with full conversational capability.  
 Vendy can:
