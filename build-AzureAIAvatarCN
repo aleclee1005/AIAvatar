@@ -48,13 +48,13 @@ _跨越文化与系统， 探索“以一当千、不落一人”的 AX 新时�
 
 👇 下图展示了系统整体集成架构图：
 
-![AI Sales Avatar]
+![Azure AIsalesAvatar](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/062AIsalesAvatar.jpg)
 
 ## 🧩 各平台在系统中的角色分工：
 
 👇 下图展示了系统中各平台的集成模块与工作流程：
 
-![Trulience 工作模块图]
+![Azure Structure](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/063AISalesAvatarStructure.jpg)
 
 ## 📌 各平台功能说明：
 
@@ -147,9 +147,39 @@ _跨越文化与系统， 探索“以一当千、不落一人”的 AX 新时�
 可用于快速创建项目与选择模型：
 
 ![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
+
+
+![Azure Create](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/055AzureAPIcreate.jpg)
+
+
+
+![Azure mini](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/056gpt-4o-mini.jpg)
+
+![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/057miniDeploy.jpg)
+
+![Azure endpoint](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/058Endpoint.jpg)
+
+![Azure Set](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/059DifyAzureSet.jpg)
+
+![Azure Parameter](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/060DifyAzureParameters.jpg)
+
+![Azure AzureTest](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/061DifyAzureTest.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
-
-
 
 完成模型配置后，我们已经准备好了运行环境，  
 现在可以开始在 Dify 上构建 AI Sales Avatar 的知识本体了。
