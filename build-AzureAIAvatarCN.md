@@ -457,7 +457,7 @@ AZURE_STT_KEY= ；AZURE_STT_REGION= ；AZURE_TTS_KEY= ；AZURE_TTS_REGION= 。
 
 ---
 
-📚 如需进一步了解 Azure Speech 与 OpenAI 服务部署，参考官方文档：  
+📚 如需进一步了解 Azure API 服务部署，参考官方文档：  
 👉 [https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)
 
 ## 🧩 Step 6：在 Mac 上本地部署 TEN Agent 的开发环境
@@ -706,7 +706,7 @@ Azure_synthesis_voice_name=en-US-AshleyNeural
 🎯 恭喜你！你现在已经拥有了完整的 **AI Sales Avatar**！
 
 ---
-✅ 来自 **OpenAI / Dify** 的聊天大脑  
+✅ 来自 **Azure OpenAI / Dify** 的聊天大脑  
 ✅ 使用 **Azure** 的自然语音合成能力（女声）  
 ✅ 拥有 **Trulience** 的数字人形象  
 ✅ 构建于 **TEN 平台** 的语音交互能力
