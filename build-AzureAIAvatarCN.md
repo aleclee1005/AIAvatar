@@ -1,6 +1,6 @@
 # AI Sales Avatar 的探索
 
-—— Dify × TEN × Trulience × Azure × Agora × OpenAI 集成实践 ——
+—— Dify × TEN × Trulience × Azure × Agora 的集成实践 ——
 
 本指南面向全球 🌍 企业开发者和个人探索者，我们将用最简单易懂的方式，  
 一步步搭建一个会 “听、说、想、演” 的 AI 数字销售助理。  
@@ -40,7 +40,7 @@ _跨越文化与系统， 探索“以一当千、不落一人”的 AX 新时�
 
 ## 一、“会听说想演”的 AI 数字人助理由哪六大平台构成？
 
-本项目以 **TEN 平台为中枢**，集成以下六大平台，  
+本项目以 **TEN 平台为中枢**，集成以下五大平台，  
 构建一个具备完整对话能力的名品车 AI 销售数字人（AI Sales Avatar）——**Vendy**。
 
 她能“**听、说、想、演**”——  
@@ -58,7 +58,7 @@ _跨越文化与系统， 探索“以一当千、不落一人”的 AX 新时�
 
 ## 📌 各平台功能说明：
 
-- **Dify + OpenAI**：搭建智能体，支持调用企业内部数据与 OpenAI API，并向 TEN 提供统一的对话接口（API）。
+- **Dify + Azure**：搭建智能体，支持调用企业内部数据与 Azure OpenAI API，并向 TEN 提供统一的对话接口（API）。
 
 - **Trulience**：提供数字人演绎能力，向 TEN 提供数字人 ID 与访问 Token，用于虚拟形象呈现。
 
@@ -97,11 +97,9 @@ _跨越文化与系统， 探索“以一当千、不落一人”的 AX 新时�
 登录 Dify 后，在左侧菜单点击 **「Settings > Model Provider」（模型提供商）**。  
 在页面中找到 **Azure OpenAI Service Model** 模块，点击 **Install** 进行安装。
 
-![Dify Models]
+![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/070ModelInstal.jpg)
 
-👉 获取方式如下：
-
-打开 Azure Portal，请登录 Azure 官方门户网站：  
+为了部署Azure模型，请打开 Azure Portal，登录 Azure 官方门户网站：  
 🔗 [https://portal.azure.com](https://portal.azure.com)
 
 在首页点击左上角的 **「Create a resource（创建资源）」**，  
@@ -143,41 +141,29 @@ _跨越文化与系统， 探索“以一当千、不落一人”的 AX 新时�
 
 ---
 
-部署完成后，进入 **Azure AI Foundry**，你将看到如下欢迎界面，  
-可用于快速创建项目与选择模型：
+部署完成后，进入 **Azure AI Foundry**，你将看到如下欢迎界面，可用于快速创建项目与选择模型：
 
 ![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
 
+进入 ChatPlaygroundrg 后，点击 Create a deployment 创建模型部署。
 
 ![Azure Create](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/055AzureAPIcreate.jpg)
 
-
+点击 Deploy Model，选择 gpt-4o-mini，然后点击 Confirm 进行确认。模型类型可根据自身需求灵活选择。
 
 ![Azure mini](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/056gpt-4o-mini.jpg)
 
+进入 Deploy gpt-4o-mini 页面后，可根据需要修改 Deployment name，确认无误后，点击右下角的 Deploy 进行部署。
+
 ![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/057miniDeploy.jpg)
+
+部署完成后，进入对应页面，请将画面中的 Endpoint、Key 和 Model Version 信息，按照下图所示，填写到 Dify 配置中相应位置：
 
 ![Azure endpoint](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/058Endpoint.jpg)
 
+以下是 Dify 中 Azure Modle配置页面的填写示例，请根据之前获取的 Endpoint、Key、Deployment name 等信息，对应填写至各字段中。
+
 ![Azure Set](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/059DifyAzureSet.jpg)
-
-![Azure Parameter](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/060DifyAzureParameters.jpg)
-
-![Azure AzureTest](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/061DifyAzureTest.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ---
 
@@ -253,7 +239,14 @@ Your task is to provide information about luxury cars to the customers based on 
 
 ![Dify AvatarData](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/015DifyAvatarData.jpg)
 
-配置完成后，可以在右侧输入框测试是否能正常调用知识库内容。  
+在完成知识库配置后，接下来为 AI Sales Avatar 配置已部署的 Azure 模型。模型参数请参考下图所示的设定：                        
+
+![Azure Parameter](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/060DifyAzureParameters.jpg)
+
+完成知识库与模型的配置后，可以在右侧的输入框中进行测试，以确认是否能够成功调用知识库内容。
+
+![Azure AzureTest](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/061DifyAzureTest.jpg)
+
 如果返回的内容基于上传的文档，就说明智能体连接成功 ✅
 
 测试无误后，点击右上角的 **「Publish」**，发布这个 AI 应用。
