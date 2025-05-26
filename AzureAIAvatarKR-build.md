@@ -97,69 +97,72 @@ Dify에 로그인한 후, 왼쪽 메뉴에서 **「Settings > Model Provider」�
 
 ![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/070ModelInstal.jpg)
 
-为了部署Azure模型，请打开 Azure Portal，登录 Azure 官方门户网站：  
+Azure Portal을 열고, Azure 공식 포털 웹사이트에 로그인합니다:
+
 🔗 [https://portal.azure.com](https://portal.azure.com)
 
-在首页点击左上角的 **「Create a resource（创建资源）」**，  
-在搜索栏中输入 **Azure OpenAI**，点击进入创建页面。
+홈페이지 왼쪽 상단에서 **「Create a resource（리소스 생성）」**를 클릭하고,  
+검색창에 **Azure OpenAI**를 입력하여 생성 페이지로 이동합니다.
 
-👇 创建入口界面如下：
+👇 생성 페이지 예시는 아래와 같습니다:
 
 ![Azure Resource](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/028Azure.jpg)
 
 ---
 
-参考以下内容，填写基本信息（**Basics**）：
+다음 내용을 참고하여 기본 정보를 입력합니다 (**Basics**):
 
 ![Azure OpenAI List](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/029AzureOpenAI.jpg)
 
 ---
 
-通常默认选择 **「公共访问」** 即可，允许服务通过互联网访问：
+일반적으로 **「공개 접근」**을 기본으로 선택하면 됩니다. 이 옵션을 선택하면 서비스가 인터넷을 통해 접근할 수 있습니다.
 
 ![Azure OpenAI Public](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/030AzureCreateAzureOpenAI.jpg)
 
-🧩 可选步骤：你可以为资源添加如 `project=ai-agent` 等标签，便于后续分类与管理。
+🧩 선택적 단계: 리소스에 `project=ai-agent`와 같은 태그를 추가하여 후속 분류 및 관리를 용이하게 할 수 있습니다.
 
-👇 标签与网络配置界面如下：
+👇 태그 및 네트워크 설정 화면은 아래와 같습니다.
 
 ![Azure resourceset](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/031AzureNetwork.jpg)
 
 ---
 
-📝 确认填写信息无误后，点击 **「Create（创建）」** 按钮，即可开始部署 Azure OpenAI 服务资源。
+📝 정보를 확인한 후, **「Create（생성）」** 버튼을 클릭하여 Azure OpenAI 서비스 리소스를 배포하기 시작합니다.
 
-👇 创建部署确认界面：
+👇 배포 확인 화면은 아래와 같습니다:
 
 ![Azure createconfirm](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/032AzureReview.jpg)
 
-👇 资源部署中画面如下：
+👇 리소스 배포 중 화면은 아래와 같습니다:
 
 ![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/033AzureDeployment.jpg)
 
 ---
 
-部署完成后，进入 **Azure AI Foundry**，你将看到如下欢迎界面，可用于快速创建项目与选择模型：
+배포가 완료되면, **Azure AI Foundry**로 이동하여 아래와 같은 환영 화면을 확인할 수 있습니다.  
+이 화면에서는 프로젝트를 빠르게 생성하고 모델을 선택할 수 있습니다.
 
 ![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
 
-进入 ChatPlaygroundrg 后，点击 Create a deployment 创建模型部署。
+ChatPlaygroundrg에 들어간 후, Create a deployment를 클릭하여 모델 배포를 생성합니다.
 
 ![Azure Create](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/055AzureAPIcreate.jpg)
 
-点击 Deploy Model，选择 gpt-4o-mini，然后点击 Confirm 进行确认。模型类型可根据自身需求灵活选择。
+Deploy Model을 클릭한 후, gpt-4o-mini를 선택하고 Confirm을 눌러 확인합니다. 모델 유형은 필요에 따라 유연하게 선택할 수 있습니다.
 
 ![Azure mini](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/056gpt-4o-mini.jpg)
 
-进入 Deploy gpt-4o-mini 页面后，可根据需要修改 Deployment name，确认无误后，点击右下角的 Deploy 进行部署。
+gpt-4o-mini 배포 페이지에 들어간 후, 필요에 따라 Deployment name을 수정하고, 내용이 정확한지 확인한 뒤 오른쪽 아래의 Deploy 버튼을 클릭하여 배포를 진행합니다.
 
 ![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/057miniDeploy.jpg)
 
-部署完成后，进入对应页面，请将画面中的 Endpoint、Key 和 Model Version 信息，按照下图所示，填写到 Dify 配置中相应位置：
+배포가 완료되면 해당 페이지로 이동하여, 화면에 표시된 Endpoint, Key, Model Version 정보를 아래 그림과 같이 Dify 설정의 해당 항목에 입력해 주세요.
 
 ![Azure endpoint](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/058Endpoint.jpg)
 
-以下是 Dify 中 Azure Modle配置页面的填写示例，请根据之前获取的 Endpoint、Key、Deployment name 等信息，对应填写至各字段中。
+다음은 Dify의 Azure 모델 설정 페이지 입력 예시입니다.
+이전에 발급받은 Endpoint, Key, Deployment name 등의 정보를 참고하여, 각 항목에 알맞게 입력해 주세요.
 
 ![Azure Set](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/059DifyAzureSet.jpg)
 
