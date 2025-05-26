@@ -44,7 +44,7 @@ AX（AIトランスフォーメーション）を個人 × 企業 × 社会の�
 **Eメール**：[alec.lee1005@gmail.com](mailto:alec.lee1005@gmail.com)
 
 
-## 一、「聞く・話す・考える・演じる」AIデジタルアシスタントは、どの6つのプラットフォームから構成されているのか？
+## 一、「聞く・話す・考える・演じる」AIデジタルアシスタントは、どの5つのプラットフォームから構成されているのか？
 
 本プロジェクトは、**TENプラットフォームを中枢**とし、  
 以下の6つの主要プラットフォームを統合することで、  
@@ -127,69 +127,80 @@ Difyにログインした後、左側メニューから **「Settings > Model Pr
 
 ![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/070ModelInstal.jpg)
 
-为了部署Azure模型，请打开 Azure Portal，登录 Azure 官方门户网站：  
+👉 取得方法は以下の通りです。
+
+Azure の公式ポータルにアクセスし、ログインします。
 🔗 [https://portal.azure.com](https://portal.azure.com)
 
-在首页点击左上角的 **「Create a resource（创建资源）」**，  
-在搜索栏中输入 **Azure OpenAI**，点击进入创建页面。
+Azure ポータルのホーム画面で、左上の **「Create a resource（リソースの作成）」** をクリックします。  
+検索バーに **Azure OpenAI** と入力し、表示された項目をクリックして作成画面へ進みます。
 
-👇 创建入口界面如下：
+👇 作成画面の例は以下の通りです：
 
 ![Azure Resource](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/028Azure.jpg)
 
 ---
 
-参考以下内容，填写基本信息（**Basics**）：
+以下の内容を参考にして、**「Basics」** セクションの基本情報を入力してください.
 
 ![Azure OpenAI List](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/029AzureOpenAI.jpg)
 
 ---
 
-通常默认选择 **「公共访问」** 即可，允许服务通过互联网访问：
+通常は、デフォルトの **「パブリックアクセス（公共アクセス）」** を選択すれば問題ありません。  
+これにより、サービスはインターネット経由でアクセス可能になります。
 
 ![Azure OpenAI Public](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/030AzureCreateAzureOpenAI.jpg)
 
-🧩 可选步骤：你可以为资源添加如 `project=ai-agent` 等标签，便于后续分类与管理。
+🧩 オプションステップ：  
+リソースに `project=ai-agent` のようなタグを追加することで、  
+後からの分類や管理がしやすくなります。
 
-👇 标签与网络配置界面如下：
+👇 タグとネットワーク設定の画面は以下の通りです：
 
 ![Azure resourceset](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/031AzureNetwork.jpg)
 
 ---
 
-📝 确认填写信息无误后，点击 **「Create（创建）」** 按钮，即可开始部署 Azure OpenAI 服务资源。
+📝 入力内容に誤りがないことを確認したら、  
+**「Create（作成）」** ボタンをクリックして、Azure OpenAI サービスのデプロイを開始します。
 
-👇 创建部署确认界面：
+👇 デプロイ確認画面の例は以下の通りです：
 
 ![Azure createconfirm](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/032AzureReview.jpg)
 
-👇 资源部署中画面如下：
+👇 リソースのデプロイ中の画面は以下の通りです：
 
 ![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/033AzureDeployment.jpg)
 
 ---
 
-部署完成后，进入 **Azure AI Foundry**，你将看到如下欢迎界面，可用于快速创建项目与选择模型：
+デプロイが完了したら、**Azure AI Foundry** にアクセスします。  
+すると、以下のようなウェルカム画面が表示され、プロジェクトの作成やモデルの選択をすばやく行うことができます。
+
+👇 ウェルカム画面の例は以下の通りです：
 
 ![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
 
-进入 ChatPlaygroundrg 后，点击 Create a deployment 创建模型部署。
+ChatPlaygroundrg にアクセスした後、「Create a deployment」 をクリックしてモデルのデプロイを作成します。
 
 ![Azure Create](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/055AzureAPIcreate.jpg)
 
-点击 Deploy Model，选择 gpt-4o-mini，然后点击 Confirm 进行确认。模型类型可根据自身需求灵活选择。
+「Deploy Model」 をクリックし、gpt-4o-mini を選択した後、「Confirm」 をクリックして確定します。
+モデルの種類は、ご自身のニーズに応じて柔軟に選択できます。
 
 ![Azure mini](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/056gpt-4o-mini.jpg)
 
-进入 Deploy gpt-4o-mini 页面后，可根据需要修改 Deployment name，确认无误后，点击右下角的 Deploy 进行部署。
+「Deploy gpt-4o-mini」 のページに進んだ後、必要に応じて Deployment name を変更し、内容に誤りがないことを確認したうえで、右下の 「Deploy」 ボタンをクリックしてデプロイを実行します。
 
 ![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/057miniDeploy.jpg)
 
-部署完成后，进入对应页面，请将画面中的 Endpoint、Key 和 Model Version 信息，按照下图所示，填写到 Dify 配置中相应位置：
+デプロイが完了したら、該当のページに移動し、画面に表示されている Endpoint、Key、Model Version の情報を、下図のとおり Dify の設定画面の該当箇所に入力してください。
 
 ![Azure endpoint](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/058Endpoint.jpg)
 
-以下是 Dify 中 Azure Modle配置页面的填写示例，请根据之前获取的 Endpoint、Key、Deployment name 等信息，对应填写至各字段中。
+以下は、Dify における Azure モデル設定ページの入力例です。
+事前に取得した Endpoint、Key、Deployment name などの情報を参照し、各項目に正しく入力してください。
 
 ![Azure Set](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/059DifyAzureSet.jpg)
 
