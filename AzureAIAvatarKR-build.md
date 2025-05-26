@@ -1,14 +1,14 @@
 # AI 세일즈 아바타의 탐구
-—— Dify × TEN × Trulience × Azure × Agora × OpenAI 통합 실습 ——
+——  Agora × Azure × Dify × TEN × Trulience 통합 실습 ——
 
 이 가이드는 전 세계 🌍 기업 개발자와 개인 탐험가들을 대상으로,  
 가장 간단하고 이해하기 쉬운 방법으로,  
 “듣고, 말하고, 생각하고, 연기하는” AI 디지털 판매 도우미를 하나씩 만들어가는 과정을 소개합니다.  
-이번에 선택한 응용 사례는: 명품차 AI 디지털 안내원이며, 그녀의 이름은 Vendy입니다.
+이번에 선택한 응용 사례는: 명품차 AI 디지털 안내원이며, 그 분의 이름은 Vendy입니다.
 
 ---
 
-정식으로 구축을 시작하기 전에, **Dify, TEN, Agora, Azure**  팀의 지도와 격려에 진심으로 감사드립니다.  
+정식으로 구축을 시작하기 전에, **Agora, Azure, Dify, TEN**  팀의 지도와 격려에 진심으로 감사드립니다.  
 전 세계 오픈소스 커뮤니티가 추구하는 **탐구(探索), 공동창작(共創) 및 임파워먼트(賦能)**  이념덕분에,  
 저와 같은 제로에서 시작한 AI 공동 구축 탐험자에게도 이 구상을 실현할 기회가 주어졌습니다.  
 이 전체적인 통합 솔루션을 실현할 수 있게 되었습니다.
@@ -37,7 +37,7 @@
 
 ## 1. “듣고 말하고 생각하고 연기하는” AI 디지털 판매 도우미는 어떤 6개 플랫폼으로 구성되나요?
 
-본 프로젝트는 **TEN 플랫폼을 중심으로**, 다음의 6개 플랫폼을 통합하여,  
+본 프로젝트는 **TEN 플랫폼을 중심으로**, 다음의 5개 플랫폼을 통합하여,  
 완전한 대화 능력을 갖춘 고급차 AI 판매 디지털 아바타(AI Sales Avatar)인 **Vendy**를 구축합니다.
 
 Vendy는 “**듣고, 말하고, 생각하고, 연기**”할 수 있습니다 —  
@@ -45,17 +45,17 @@ Vendy는 “**듣고, 말하고, 생각하고, 연기**”할 수 있습니다 �
 
 👇 아래 그림은 시스템 전체 통합 아키텍처를 보여줍니다:
 
-![AI Sales Avatar](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/001AIsalesAvatar.jpg)
+![Azure AIsalesAvatar](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/062AIsalesAvatar.jpg)
 
 ## 🧩 각 플랫폼이 시스템에서 맡은 역할
 
 👇 아래 그림은 시스템 내 각 플랫폼의 통합 모듈과 작업 흐름을 보여줍니다.
 
-![Trulience](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/002Trulience.jpg)
+![Azure Structure](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/063AISalesAvatarStructure.jpg)
 
 ## 📌 각 플랫폼 기능 설명
 
-- **Dify + OpenAI**: 스마트 에이전트를 구축하고, 기업 내부 데이터와 OpenAI API를 호출하여 TEN에 통합된 대화 인터페이스(API)를 제공합니다.
+- **Dify + Azure OpenAI**: 스마트 에이전트를 구축하고, 기업 내부 데이터와 OpenAI API를 호출하여 TEN에 통합된 대화 인터페이스(API)를 제공합니다.
 
 - **Trulience**: 디지털 인간 연기 능력을 제공하며, TEN에 디지털 인간 ID와 액세스 토큰을 제공하여 가상 형상 구현을 지원합니다.
 
@@ -92,19 +92,78 @@ Vendy는 “**듣고, 말하고, 생각하고, 연기**”할 수 있습니다 �
 ![Dify Email](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/004DifyEmail.jpg)
 
 Dify에 로그인한 후, 왼쪽 메뉴에서 **「Settings > Model Provider」（모델 제공자）**를 클릭합니다.  
-페이지에서 **OpenAI** 모듈을 찾아 **Install**을 클릭하여 설치합니다.
+페이지에서 **Azure OpenAI Service Model** 모듈을 찾아 **Install**을 클릭하여 설치합니다.
 
-![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/005DifyModels.jpg)
 
-**OpenAI** 모듈에서 파란색 링크 **「Get your API Key from OpenAI」**를 클릭합니다.  
-시스템은 자동으로 OpenAI 공식 플랫폼으로 이동합니다.[https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)。
+![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/070ModelInstal.jpg)
 
-![Dify OpenAI](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/006DifyOpenAI.jpg)
+为了部署Azure模型，请打开 Azure Portal，登录 Azure 官方门户网站：  
+🔗 [https://portal.azure.com](https://portal.azure.com)
 
-OpenAI에서 **「+ Create new secret key」**를 클릭하여 새 API 키를 생성합니다.  
-생성된 키를 복사하고 Dify로 돌아가서 OpenAI 모듈에 아래 필드에 붙여넣습니다.
+在首页点击左上角的 **「Create a resource（创建资源）」**，  
+在搜索栏中输入 **Azure OpenAI**，点击进入创建页面。
 
-![Dify OpenAI Key](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/007DifyOpenAIKey.jpg)
+👇 创建入口界面如下：
+
+![Azure Resource](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/028Azure.jpg)
+
+---
+
+参考以下内容，填写基本信息（**Basics**）：
+
+![Azure OpenAI List](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/029AzureOpenAI.jpg)
+
+---
+
+通常默认选择 **「公共访问」** 即可，允许服务通过互联网访问：
+
+![Azure OpenAI Public](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/030AzureCreateAzureOpenAI.jpg)
+
+🧩 可选步骤：你可以为资源添加如 `project=ai-agent` 等标签，便于后续分类与管理。
+
+👇 标签与网络配置界面如下：
+
+![Azure resourceset](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/031AzureNetwork.jpg)
+
+---
+
+📝 确认填写信息无误后，点击 **「Create（创建）」** 按钮，即可开始部署 Azure OpenAI 服务资源。
+
+👇 创建部署确认界面：
+
+![Azure createconfirm](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/032AzureReview.jpg)
+
+👇 资源部署中画面如下：
+
+![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/033AzureDeployment.jpg)
+
+---
+
+部署完成后，进入 **Azure AI Foundry**，你将看到如下欢迎界面，可用于快速创建项目与选择模型：
+
+![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
+
+进入 ChatPlaygroundrg 后，点击 Create a deployment 创建模型部署。
+
+![Azure Create](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/055AzureAPIcreate.jpg)
+
+点击 Deploy Model，选择 gpt-4o-mini，然后点击 Confirm 进行确认。模型类型可根据自身需求灵活选择。
+
+![Azure mini](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/056gpt-4o-mini.jpg)
+
+进入 Deploy gpt-4o-mini 页面后，可根据需要修改 Deployment name，确认无误后，点击右下角的 Deploy 进行部署。
+
+![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/057miniDeploy.jpg)
+
+部署完成后，进入对应页面，请将画面中的 Endpoint、Key 和 Model Version 信息，按照下图所示，填写到 Dify 配置中相应位置：
+
+![Azure endpoint](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/058Endpoint.jpg)
+
+以下是 Dify 中 Azure Modle配置页面的填写示例，请根据之前获取的 Endpoint、Key、Deployment name 等信息，对应填写至各字段中。
+
+![Azure Set](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/059DifyAzureSet.jpg)
+
+---
 
 모델 구성이 완료되면, 우리는 실행 환경을 준비했습니다.  
 이제 Dify에서 AI Sales Avatar의 지식 본체를 구축할 수 있습니다.
@@ -337,52 +396,9 @@ App ID를 획득한 후, 프로젝트 오른쪽의 ✏️ **연필 아이콘(편
 
 AZURE_STT_KEY= ；AZURE_STT_REGION= ；AZURE_TTS_KEY= ；AZURE_TTS_REGION= 。
 
-👉 획득 방법은 다음과 같습니다:
-
-Azure Portal을 열고, Azure 공식 포털 웹사이트에 로그인합니다:
-
-🔗 [https://portal.azure.com](https://portal.azure.com)
-
-홈페이지 왼쪽 상단에서 **「Create a resource（리소스 생성）」**를 클릭하고,  
-검색창에 **Azure OpenAI**를 입력하여 생성 페이지로 이동합니다.
-
-👇 생성 페이지 예시는 아래와 같습니다:
-
-![Azure Resource](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/028Azure.jpg)
-
 ---
 
-다음 내용을 참고하여 기본 정보를 입력합니다 (**Basics**):
-
-![Azure OpenAI List](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/029AzureOpenAI.jpg)
-
----
-
-일반적으로 **「공개 접근」**을 기본으로 선택하면 됩니다. 이 옵션을 선택하면 서비스가 인터넷을 통해 접근할 수 있습니다:
-
-![Azure OpenAI Public](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/030AzureCreateAzureOpenAI.jpg)
-
-🧩 선택적 단계: 리소스에 `project=ai-agent`와 같은 태그를 추가하여 후속 분류 및 관리를 용이하게 할 수 있습니다.
-
-👇 태그 및 네트워크 설정 화면은 아래와 같습니다:
-
-![Azure resourceset](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/031AzureNetwork.jpg)
-
----
-
-📝 정보를 확인한 후, **「Create（생성）」** 버튼을 클릭하여 Azure OpenAI 서비스 리소스를 배포하기 시작합니다.
-
-👇 배포 확인 화면은 아래와 같습니다:
-
-![Azure createconfirm](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/032AzureReview.jpg)
-
-👇 리소스 배포 중 화면은 아래와 같습니다:
-
-![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/033AzureDeployment.jpg)
-
----
-
-배포가 완료되면, **Azure AI Foundry**로 이동하여 아래와 같은 환영 화면을 확인할 수 있습니다.  
+배포가 완료되였기에, **Azure AI Foundry**로 이동하여 아래와 같은 환영 화면을 확인할 수 있습니다.  
 이 화면에서는 프로젝트를 빠르게 생성하고 모델을 선택할 수 있습니다:
 
 ![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
