@@ -1,6 +1,6 @@
 # AIセールスアバターの探求
 
-—— Dify × TEN × Trulience × Azure × Agora × OpenAI 統合実践ガイド ——
+—— Agora × Azure × Dify × TEN × Trulience 統合実践ガイド ——
 
 本ガイドは、世界中の 🌍 企業開発者および個人の探究者の方々を対象に、  
 できるだけシンプルでわかりやすい方法で、  
@@ -61,19 +61,19 @@ Vendyは、以下の4つの能力を備えています：
 
 👇 以下は、システム全体の統合アーキテクチャ図です：
 
-![AI Sales Avatar](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/001AIsalesAvatar.jpg)
+![Azure AIsalesAvatar](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/062AIsalesAvatar.jpg)
 
 ## 🧩 各プラットフォームにおける役割分担
 
 👇 下図は、システム内で各プラットフォームが担うモジュールおよび  
 統合されたワークフローの概要を示しています：
 
-![Trulience 工作模块图](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/002Trulience.jpg)
+![Azure Structure](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/063AISalesAvatarStructure.jpg)
 
 ## 📌 各プラットフォームの機能概要：
 
-- **Dify + OpenAI**：  
-  インテリジェントエージェントを構築し、社内データおよびOpenAI APIを活用。  
+- **Dify + Azure OpenAI**：  
+  インテリジェントエージェントを構築し、社内データおよびAzure OpenAI APIを活用。  
   TENプラットフォームに対し、統一された対話APIインターフェースを提供します。
 
 - **Trulience**：  
@@ -123,19 +123,77 @@ Vendyは、以下の4つの能力を備えています：
 ![Dify Email](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/004DifyEmail.jpg)
 
 Difyにログインした後、左側メニューから **「Settings > Model Provider（モデルプロバイダー）」** をクリックします。  
-ページ内の **OpenAI** モジュールを見つけて、**「Install」** をクリックし、インストールを行います。
+ページ内の **Azure OpenAI Service Model** モジュールを見つけて、**「Install」** をクリックし、インストールを行います。
 
-![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/005DifyModels.jpg)
+![Dify Models](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/070ModelInstal.jpg)
 
-**OpenAI** モジュール内で、青色のリンク **「Get your API Key from OpenAI」** をクリックすると、  
-OpenAI の公式プラットフォームへ：[https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)。
+为了部署Azure模型，请打开 Azure Portal，登录 Azure 官方门户网站：  
+🔗 [https://portal.azure.com](https://portal.azure.com)
 
-![Dify OpenAI](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/006DifyOpenAI.jpg)
+在首页点击左上角的 **「Create a resource（创建资源）」**，  
+在搜索栏中输入 **Azure OpenAI**，点击进入创建页面。
 
-OpenAI の画面で **「+ Create new secret key」** をクリックし、新しい APIキー を生成します。  
-生成されたキーをコピーし、Dify に戻って OpenAI モジュール内の以下のフィールドに貼り付けます：
+👇 创建入口界面如下：
 
-![Dify OpenAI Key](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/007DifyOpenAIKey.jpg)
+![Azure Resource](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/028Azure.jpg)
+
+---
+
+参考以下内容，填写基本信息（**Basics**）：
+
+![Azure OpenAI List](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/029AzureOpenAI.jpg)
+
+---
+
+通常默认选择 **「公共访问」** 即可，允许服务通过互联网访问：
+
+![Azure OpenAI Public](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/030AzureCreateAzureOpenAI.jpg)
+
+🧩 可选步骤：你可以为资源添加如 `project=ai-agent` 等标签，便于后续分类与管理。
+
+👇 标签与网络配置界面如下：
+
+![Azure resourceset](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/031AzureNetwork.jpg)
+
+---
+
+📝 确认填写信息无误后，点击 **「Create（创建）」** 按钮，即可开始部署 Azure OpenAI 服务资源。
+
+👇 创建部署确认界面：
+
+![Azure createconfirm](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/032AzureReview.jpg)
+
+👇 资源部署中画面如下：
+
+![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/033AzureDeployment.jpg)
+
+---
+
+部署完成后，进入 **Azure AI Foundry**，你将看到如下欢迎界面，可用于快速创建项目与选择模型：
+
+![Azure AI Foundry](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/034AzureAIFoundry.jpg)
+
+进入 ChatPlaygroundrg 后，点击 Create a deployment 创建模型部署。
+
+![Azure Create](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/055AzureAPIcreate.jpg)
+
+点击 Deploy Model，选择 gpt-4o-mini，然后点击 Confirm 进行确认。模型类型可根据自身需求灵活选择。
+
+![Azure mini](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/056gpt-4o-mini.jpg)
+
+进入 Deploy gpt-4o-mini 页面后，可根据需要修改 Deployment name，确认无误后，点击右下角的 Deploy 进行部署。
+
+![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/057miniDeploy.jpg)
+
+部署完成后，进入对应页面，请将画面中的 Endpoint、Key 和 Model Version 信息，按照下图所示，填写到 Dify 配置中相应位置：
+
+![Azure endpoint](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/058Endpoint.jpg)
+
+以下是 Dify 中 Azure Modle配置页面的填写示例，请根据之前获取的 Endpoint、Key、Deployment name 等信息，对应填写至各字段中。
+
+![Azure Set](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/059DifyAzureSet.jpg)
+
+---
 
 モデルの設定が完了すると、Dify上での実行環境の準備が整います。  
 これで、AI Sales Avatar の「知識ベース（ナレッジ本体）」の構築を始めることができます。
@@ -412,54 +470,6 @@ AI の返答を音声に変換する「TTS（Text to Speech）」の機能を担
 - `AZURE_STT_REGION`  
 - `AZURE_TTS_KEY`  
 - `AZURE_TTS_REGION`
-
-👉 取得方法は以下の通りです：
-
-Azure の公式ポータルにアクセスし、ログインします：  
-🔗 [https://portal.azure.com](https://portal.azure.com)
-
-Azure ポータルのホーム画面で、左上の **「Create a resource（リソースの作成）」** をクリックします。  
-検索バーに **Azure OpenAI** と入力し、表示された項目をクリックして作成画面へ進みます。
-
-👇 作成画面の例は以下の通りです：
-
-![Azure Resource](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/028Azure.jpg)
-
----
-
-以下の内容を参考にして、**「Basics」** セクションの基本情報を入力してください：
-
-![Azure OpenAI List](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/029AzureOpenAI.jpg)
-
----
-
-通常は、デフォルトの **「パブリックアクセス（公共アクセス）」** を選択すれば問題ありません。  
-これにより、サービスはインターネット経由でアクセス可能になります。
-
-![Azure OpenAI Public](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/030AzureCreateAzureOpenAI.jpg)
-
-🧩 オプションステップ：  
-リソースに `project=ai-agent` のようなタグを追加することで、  
-後からの分類や管理がしやすくなります。
-
-👇 タグとネットワーク設定の画面は以下の通りです：
-
-![Azure resourceset](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/031AzureNetwork.jpg)
-
----
-
-📝 入力内容に誤りがないことを確認したら、  
-**「Create（作成）」** ボタンをクリックして、Azure OpenAI サービスのデプロイを開始します。
-
-👇 デプロイ確認画面の例は以下の通りです：
-
-![Azure createconfirm](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/032AzureReview.jpg)
-
-👇 リソースのデプロイ中の画面は以下の通りです：
-
-![Azure deploy](https://raw.githubusercontent.com/aleclee1005/AISalesAvatar/img/img/033AzureDeployment.jpg)
-
----
 
 デプロイが完了したら、**Azure AI Foundry** にアクセスします。  
 すると、以下のようなウェルカム画面が表示され、  
